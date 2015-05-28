@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 26, 2015 at 11:43 PM
+-- Generation Time: May 28, 2015 at 08:35 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -59,8 +59,7 @@ CREATE TABLE IF NOT EXISTS `client_review` (
   `client_review_title` varchar(2000) NOT NULL,
   `client_review_value` varchar(5000) NOT NULL,
   `client_review_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `member_id` int(11) NOT NULL,
-  `member_id_role` int(20) NOT NULL
+  `member_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -105,8 +104,7 @@ CREATE TABLE IF NOT EXISTS `member` (
   `member_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `member_fname` varchar(500) NOT NULL,
   `member_surname` varchar(500) NOT NULL,
-  `member_telephone` int(20) NOT NULL,
-  `member_role` enum('planner','client','admin','') NOT NULL
+  `member_telephone` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
